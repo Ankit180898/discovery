@@ -38,6 +38,7 @@ class HomeScreenController extends GetxController {
         for (var i in data['data']) {
           discoveryList.add(DiscoveryModel.fromJson(i));
         }
+        isLoading(false);
         page++;
       }
     } catch (error) {
@@ -48,6 +49,7 @@ class HomeScreenController extends GetxController {
     }
   }
 
+  //scroll controller to fetch more data
   void onScroll() {
     if (scrollController.position.maxScrollExtent == scrollController.position.pixels &&
         hasMoreData.value && // Only fetch more data if there is more data available

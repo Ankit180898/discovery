@@ -1,16 +1,34 @@
-# discovery
+# Discovery App
 
-A new Flutter project.
+This Flutter application displays a list of discovery items fetched from an API. It implements pagination and infinite scrolling to load more items as the user scrolls through the list.
 
-## Getting Started
+## Table of Contents
 
-This project is a starting point for a Flutter application.
+- [Dependencies](#dependencies)
+- [Features](#features)
+- [How to Use](#how-to-use)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Dependencies
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter: Used to build the mobile application.
+- GetX: State management library for Flutter.
+- Shimmer: Package for adding shimmer loading effect.
+- Connectivity Plus: Package for checking internet connectivity.
+
+## Features
+
+- Displays a list of discovery items fetched from an API.
+- Supports pagination and infinite scrolling to load more items.
+- Shows a shimmer loading effect while loading more items.
+- Handles network failures gracefully by displaying a snackbar when the internet connection is lost.
+
+## How to Use
+- Clone the repository:
+  git clone https://github.com/Ankit180898/discovery.git
+
+- Navigate to the project directory:
+  cd discovery
+
+- Run the app:
+  flutter run
