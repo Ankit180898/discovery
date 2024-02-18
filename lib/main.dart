@@ -1,10 +1,8 @@
-import 'package:discovery/Services/api_service.dart'; // Import ApiService
 import 'package:discovery/dependency_injection.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-
-import 'Controllers/internet_controller.dart';
 import 'Views/home_screen.dart';
+
 void main() {
   runApp(const MyApp());
   DependencyInjection.init();

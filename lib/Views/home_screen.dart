@@ -1,6 +1,7 @@
 import 'package:discovery/Controllers/home_screen_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shimmer/shimmer.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -20,7 +21,33 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Obx(() {
         if (homeScreenController.isLoading.value) {
-          return Center(child: CircularProgressIndicator());
+          // Show shimmer loading effect for the last item
+          return Shimmer.fromColors(
+            baseColor: Colors.grey[300]!,
+            highlightColor: Colors.grey[100]!,
+            child: ListView.builder(
+                itemCount:10,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    leading: Container(
+                      width: 48,
+                      height: 48,
+                      color: Colors.white,
+                    ),
+                    title: Container(
+                      width: double.infinity,
+                      height: 16,
+                      color: Colors.white,
+                    ),
+                    subtitle: Container(
+                      width: double.infinity,
+                      height: 12,
+                      color: Colors.white,
+                    ),
+                  );
+                }
+            )
+          );
         } else {
           return Padding(
             padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),

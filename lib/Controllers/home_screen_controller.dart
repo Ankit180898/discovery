@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../Models/discovery_model.dart';
 import '../Services/api_service.dart';
 

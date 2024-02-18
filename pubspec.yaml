@@ -37,7 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   get:
   http:
-  connectivity_plus: 
+  connectivity_plus:
+  shimmer:
 
 dev_dependencies:
   flutter_test:
